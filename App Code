@@ -1,0 +1,38 @@
+# # #================================= Weather App =====================================================
+# import pyowm
+# from pyowm.utils.config import get_default_config
+# def get_weather(api_key, city, t):
+#     config_dict = get_default_config()
+#     config_dict['language'] = 'en'
+#     owm = pyowm.OWM(api_key, config_dict)
+#     mgr = owm.weather_manager()
+#     try:
+#         observation = mgr.weather_at_place(city)
+#         weather = observation.weather
+
+#         temperature_c = weather.temperature('celsius')['temp']
+#         temperature_f = weather.temperature('fahrenheit')['temp']
+#         pressure = weather.pressure['press']
+#         humidity = weather.humidity
+#         weather_description = weather.detailed_status
+#         wind_speed = weather.wind()['speed']
+#         wc=str(weather_description)
+#         print("Weather of", city)
+#         if t == 1:
+#             print("Temperature in Celsius:", temperature_c, "°C")
+#         elif t == 2:
+#             print("Temperature in Fahrenheit:", temperature_f, "°F")
+#         else:
+#             print(t, "is an Invalid Input")
+#             return
+#         print("Pressure is", pressure, "hPa")
+#         print("Humidity is", humidity, "%")
+#         print("Weather Description:", (wc))
+#         print("Wind Speed is", wind_speed, "m/s")
+#     except Exception as e:
+#         print("An error occurred:", e)
+
+# api_key = "your api key"
+# city = input("Enter city name: ")
+# t = int(input("Enter Type of Temperature (1: °C, 2: °F): "))
+# get_weather(api_key, city, t)
